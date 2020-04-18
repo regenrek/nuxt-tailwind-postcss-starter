@@ -1,22 +1,23 @@
-# codesandbox-nuxt
+# TailwindCSS 1.2.0 + Nuxt.js + PostCSS Starter Project
 
-> Nuxt starter for CodeSandBox (used for https://template.nuxtjs.org)
+This is a quick starter project with manual integration of TailwindCSS with
+PostCSS. Nothing fancy.
+
+
+[How to use TailwindCSS 1.2.0 with Nuxt.js](https://regenrek.com/posts/how-to-use-tailwind-css-1.0.1-in-nuxt/)
+
+[![Edit codesandbox-nuxt](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/regenrek/nuxt-tailwind-postcss-starter/tree/master/?fontsize=14&hidenavigation=1&theme=dark)
+
+
 
 ## Build Setup
 
+### Install
 ``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
+yarn
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+### Run
+``` bash
+yarn dev
+```
