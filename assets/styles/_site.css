@@ -1,0 +1,17 @@
+@responsive {
+    .container {
+        max-width: 42rem;
+        @apply mx-auto px-1; 
+    }
+}
+
+@screen lg {
+    .container-wide {
+        max-width: 62rem;
+        @apply px-0;
+    }
+
+    .container {
+        @apply px-0;
+    }
+}

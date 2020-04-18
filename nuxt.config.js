@@ -1,9 +1,12 @@
+const path = require('path')
+
+
 export default {
   /*
   ** Rendering mode
   ** Doc: https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'universal',
+  mode: 'spa',
 
   /*
   ** Headers of the page
@@ -23,7 +26,9 @@ export default {
   ** Global CSS
   ** Doc: https://nuxtjs.org/api/configuration-css
   */
-  css: [],
+  css: [
+    '~assets/styles/main.css', 
+  ],
 
   /*
   ** Plugins to load before mounting the App
@@ -56,7 +61,7 @@ export default {
  build: {
   postcss: {
     plugins: {
-      'postcss-import': {}
+      'postcss-import': {},
       tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
       'postcss-nested': {}
     }
