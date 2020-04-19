@@ -14,12 +14,13 @@
   "dependencies": {
     "@nuxt/http": "^0.4.0",
     "nuxt": "^2.12.2",
-    "postcss-import": "12.0.1",
-    "postcss-nested": "4.2.1",
     "reqlim": "^0.0.0",
     "tailwindcss": "1.2.0"
   },
   "devDependencies": {
-    "nuxt-purgecss": "^0.2.1"
+    "nuxt-purgecss": "^0.2.1",
+    "nuxt-webfontloader": "^1.1.0",
+    "postcss-import": "12.0.1",
+    "postcss-nested": "4.2.1"
   }
 }

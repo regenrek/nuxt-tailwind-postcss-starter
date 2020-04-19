@@ -43,10 +43,17 @@ export default {
   modules: [
     // Doc: https://http.nuxtjs.org
     'nuxt-purgecss',
+    'nuxt-webfontloader',
     '@nuxt/http',
     // TODO: Remove it if you want to eject from codeSandbox
     './codesandbox'
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Lato:400,700'] //Loads Lato font with weights 400 and 700
+    }
+  },
 
   purgeCSS: {
     mode: 'postcss',
