@@ -13,7 +13,7 @@ export default {
   ** Doc: https://vue-meta.nuxtjs.org/api/#metainfo-properties
   */
   head: {
-    title: 'Nuxt.js starter for CSB',
+    title: 'TailwindCSS + PostCSS + Nuxt.js',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,7 +27,7 @@ export default {
   ** Doc: https://nuxtjs.org/api/configuration-css
   */
   css: [
-    '~assets/styles/main.css', 
+    '~assets/styles/tailwind.css', 
   ],
 
   /*
@@ -42,10 +42,16 @@ export default {
   */
   modules: [
     // Doc: https://http.nuxtjs.org
+    'nuxt-purgecss',
     '@nuxt/http',
     // TODO: Remove it if you want to eject from codeSandbox
     './codesandbox'
   ],
+
+  purgeCSS: {
+    mode: 'postcss',
+    enabled: (process.env.NODE_ENV === 'production')
+  },
 
   /*
   ** HTTP module configuration
@@ -68,6 +74,18 @@ export default {
   },
   preset: {
     stage: 1 // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        tailwindConfig: {
+          test: /tailwind\.config/,
+          chunks: 'all',
+          priority: 10,
+          name: true
+        }
+      }
+    }
   }
 }
 };

@@ -18,5 +18,8 @@
     "postcss-nested": "4.2.1",
     "reqlim": "^0.0.0",
     "tailwindcss": "1.2.0"
+  },
+  "devDependencies": {
+    "nuxt-purgecss": "^0.2.1"
   }
 }
